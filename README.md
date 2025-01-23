@@ -1,70 +1,167 @@
-# Getting Started with Create React App
+# Task Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple task management system that allows users to manage tasks with drag-and-drop functionality, create tasks, and manage users. It includes a dashboard, task creation page, and user profile management.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### `Dashboard`
 
-### `npm start`
+* Displays tasks categorized by their current status.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Allows users to drag and drop tasks between columns to update their status.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Includes buttons to add new tasks and navigate to the profile page.
 
-### `npm test`
+### `Add Task Page`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Create new tasks with a title, description, and assignee.
 
-### `npm run build`
+* Fetches the list of users from the backend API for task assignment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Profile Page`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Displays user details such as name, email, and role in a table format.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Allows adding, editing, and deleting user details.
 
-### `npm run eject`
+## Live Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Frontend (Deployed): Task Management System Frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Backend Repository: Task Management System Backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Setup Instructions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend Setup
 
-## Learn More
+* Clone the frontend repository:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ `git clone https://github.com/R-Kavi-yarasu/task-frontend.git `
+ `cd task-frontend`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Install dependencies:
 
-### Code Splitting
+`npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Update the backend API URL:Ensure the frontend is pointing to the correct backend API. For development, update the API URL to:
 
-### Analyzing the Bundle Size
+`const API_BASE_URL = "http://localhost:5000";`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For production, it should point to your deployed backend.
 
-### Making a Progressive Web App
+* Start the frontend server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`npm start`
 
-### Advanced Configuration
+The frontend will run at [http://localhost:3000].
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Backend Setup
 
-### Deployment
+* Clone the backend repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+`git clone https://github.com/R-Kavi-yarasu/task-backend.git`
+`cd task-backend`
 
-### `npm run build` fails to minify
+* Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm install`
+
+* Set up environment variables:Create a .env file in the backend directory with the following:
+
+`PORT=5000`
+`MONGO_URI=<your-mongodb-connection-string>`
+
+* Start the backend server:
+
+`npm start`
+
+The backend will run at [http://localhost:5000].
+
+# API Documentation
+
+## Task API
+
+### GET `/task`
+
+* Fetch all tasks.
+
+* Response: Array of tasks.
+
+### POST `/task`
+
+* Create a new task.
+
+* Body:
+
+`{`
+  `"title": "Task Title",`
+  `"description": "Task Description",`
+  `"assignedto": "User ID",`
+  `"taskstatus": "todo/In Progress/Done"`
+`}`
+
+* Response: Created task object.
+
+### PUT `/task/:id`
+
+* Update an existing task by ID.
+
+* Body: Fields to update (e.g., `taskstatus`).
+
+* Response: Updated task object.
+
+### DELETE /task/:id
+
+* Delete a task by ID.
+
+* Response: Success message.
+
+## User API
+
+### GET /user
+
+* Fetch all users.
+
+* Response: Array of users.
+
+### POST /user
+
+* Create a new user.
+
+* Body:
+
+`{`
+  `"name": "User Name",`
+  `"email": "user@example.com",`
+  `"role": "User Role"`
+`}`
+
+* Response: Created user object.
+
+### PUT /user/:id
+
+* Update an existing user by ID.
+
+* Body: Fields to update (e.g., name, email, role).
+
+* Response: Updated user object.
+
+### DELETE /user/:id
+
+* Delete a user by ID.
+
+* Response: Success message.
+
+## How to Use
+
+### Start the backend server on http://localhost:5000.
+
+### Start the frontend server on http://localhost:3000.
+
+### Open the application in your browser:
+
+* Use the Dashboard to view and manage tasks.
+
+* Use the Add Task Page to create new tasks.
+
+* Use the Profile Page to manage user information.
