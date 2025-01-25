@@ -59,7 +59,7 @@ The frontend will run at [http://localhost:3000].
 
 * Clone the backend repository:
 
-`git clone https://github.com/R-Kavi-yarasu/task-backend.git`
+`git clone https://github.com/R-Kavi-yarasu/task-backend.git`\
 `cd task-backend`
 
 * Install dependencies:
@@ -68,7 +68,7 @@ The frontend will run at [http://localhost:3000].
 
 * Set up environment variables:Create a .env file in the backend directory with the following:
 
-`PORT=5000`
+`PORT=5000`\
 `MONGO_URI=<your-mongodb-connection-string>`
 
 * Start the backend server:
@@ -93,12 +93,12 @@ The backend will run at [http://localhost:5000].
 
 * Body:
 
-`{`
-  `"title": "Task Title",`
-  `"description": "Task Description",`
-  `"assignedto": "User ID",`
-  `"taskstatus": "todo/In Progress/Done"`
-`}`
+`{`/
+  `"title": "Task Title",`/
+  `"description": "Task Description",`/
+  `"assignedto": "User ID",`/
+  `"taskstatus": "todo/In Progress/Done"`/
+`}`/
 
 * Response: Created task object.
 
@@ -110,7 +110,7 @@ The backend will run at [http://localhost:5000].
 
 * Response: Updated task object.
 
-### DELETE /task/:id
+### DELETE `/task/:id`
 
 * Delete a task by ID.
 
@@ -118,27 +118,27 @@ The backend will run at [http://localhost:5000].
 
 ## User API
 
-### GET /user
+### GET `/user`
 
 * Fetch all users.
 
 * Response: Array of users.
 
-### POST /user
+### POST `/user`
 
 * Create a new user.
 
 * Body:
 
-`{`
-  `"name": "User Name",`
-  `"email": "user@example.com",`
-  `"role": "User Role"`
-`}`
+`{`/
+  `"name": "User Name",`/
+  `"email": "user@example.com",`/
+  `"role": "User Role"`/
+`}`/
 
 * Response: Created user object.
 
-### PUT /user/:id
+### PUT `/user/:id`
 
 * Update an existing user by ID.
 
@@ -146,7 +146,7 @@ The backend will run at [http://localhost:5000].
 
 * Response: Updated user object.
 
-### DELETE /user/:id
+### DELETE `/user/:id`
 
 * Delete a user by ID.
 
