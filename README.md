@@ -26,9 +26,9 @@ This project is a simple task management system that allows users to manage task
 
 ## Live Demo
 
-* Frontend (Deployed): Task Management System Frontend
+* Frontend (Deployed): [Task Management System Frontend](https://task-frontend-chi.vercel.app/)
 
-* Backend Repository: Task Management System Backend
+* Backend Repository: [Task Management System Backend](https://github.com/R-Kavi-yarasu/task-backend)
 
 ## Setup Instructions
 
@@ -36,7 +36,7 @@ This project is a simple task management system that allows users to manage task
 
 * Clone the frontend repository:
 
- `git clone https://github.com/R-Kavi-yarasu/task-frontend.git `
+ `git clone https://github.com/R-Kavi-yarasu/task-frontend.git `\
  `cd task-frontend`
 
 * Install dependencies:
@@ -154,11 +154,11 @@ The backend will run at [http://localhost:5000].
 
 ## How to Use
 
-### Start the backend server on http://localhost:5000.
+#### Start the backend server on http://localhost:5000.
 
-### Start the frontend server on http://localhost:3000.
+#### Start the frontend server on http://localhost:3000.
 
-### Open the application in your browser:
+#### Open the application in your browser:
 
 * Use the Dashboard to view and manage tasks.
 
