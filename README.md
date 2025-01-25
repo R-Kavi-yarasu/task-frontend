@@ -93,12 +93,12 @@ The backend will run at [http://localhost:5000].
 
 * Body:
 
-`{`/
-  `"title": "Task Title",`/
-  `"description": "Task Description",`/
-  `"assignedto": "User ID",`/
-  `"taskstatus": "todo/In Progress/Done"`/
-`}`/
+`{`\
+  `"title": "Task Title",`\
+  `"description": "Task Description",`\
+  `"assignedto": "User ID",`\
+  `"taskstatus": "todo/In Progress/Done"`\
+`}`\
 
 * Response: Created task object.
 
@@ -130,11 +130,11 @@ The backend will run at [http://localhost:5000].
 
 * Body:
 
-`{`/
-  `"name": "User Name",`/
-  `"email": "user@example.com",`/
-  `"role": "User Role"`/
-`}`/
+`{`\
+  `"name": "User Name",`\
+  `"email": "user@example.com",`\
+  `"role": "User Role"`\
+`}`\
 
 * Response: Created user object.
 
